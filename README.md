@@ -34,5 +34,8 @@ Needs Chrome and a matching ChromeDriver (Selenium Manager downloads one automat
 - SauceDemo's current React build ignored normal WebDriver clicks in headless Chrome (the click landed but the handler did not run), and the checkout form kept only the first typed field. `Clicks` clicks and sets values through the DOM API and fires the `input` event. Both are documented in the helper.
 - Tests use `data-test` attributes where the site provides them.
 
+## Test data
+Only the public demo credentials published by the demo sites themselves are used (SauceDemo's login page lists its test users; Restful Booker's API docs list the admin demo login). No private credentials are in this repo.
+
 ## Credits
 Built with AI assistance (Instinct); tests were run and debugged against the live site, and the results above come from that run.
