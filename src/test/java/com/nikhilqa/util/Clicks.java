@@ -8,7 +8,8 @@ import org.openqa.selenium.WebElement;
  * SauceDemo's current React build does not process CDP-synthesised clicks
  * in headless Chrome (navigator.webdriver = true): the click lands on the
  * right element but the onClick handler never fires. Clicking through the
- * DOM API works. This helper centralises that workaround so every page
+ * DOM API works. Standard click()/sendKeys() with explicit waits failed 2-3 of 7 tests
+ * (docs/standard-click-experiment.txt). This is a workaround, not a user-equivalent interaction. This helper centralises that workaround so every page
  * object clicks the same, documented way.
  */
 public final class Clicks {

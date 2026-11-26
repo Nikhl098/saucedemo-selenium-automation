@@ -1,5 +1,8 @@
 package com.nikhilqa.pages;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.nikhilqa.util.Clicks;
@@ -24,8 +27,12 @@ public class InventoryPage {
     }
 
     public boolean isLoaded() {
-        return !driver.findElements(title).isEmpty()
-                && driver.findElement(title).getText().equals("Products");
+        try {
+            return new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .until(ExpectedConditions.textToBePresentInElementLocated(title, "Products"));
+        } catch (org.openqa.selenium.TimeoutException e) {
+            return false;
+        }
     }
 
     public int getProductCount() {

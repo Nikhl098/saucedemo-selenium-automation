@@ -1,0 +1,10 @@
+Experiment 26 Nov 2026: same suite with standard WebDriver click()/sendKeys() and explicit waits, no JavaScript.
+Run 1: 2 of 7 failed. Run 2: 3 of 7 failed.
+[ERROR] Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 33.91 s <<< FAILURE! -- in TestSuite
+[ERROR]   CheckoutTests.checkoutWithoutFirstName_showsValidationError:39 ? NoSuchElement no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+[ERROR]   CheckoutTests.completeCheckout_orderIsConfirmed:20 Cart page not shown expected [true] but found [false]
+---
+[ERROR] Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 34.85 s <<< FAILURE! -- in TestSuite
+[ERROR]   CheckoutTests.checkoutWithoutFirstName_showsValidationError:39 ? NoSuchElement no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+[ERROR]   CheckoutTests.completeCheckout_orderIsConfirmed:20 Cart page not shown expected [true] but found [false]
+[ERROR]   InventoryTests.addTwoProducts_cartBadgeShowsTwo:22 Cart badge should show 2 expected [2] but found [1]
